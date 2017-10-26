@@ -1,0 +1,163 @@
+/******************/
+/**** RESET CSS****/
+/******************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/******************/
+/**** CUSTOME ****/
+/******************/
+
+/*
+https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
+*/
+
+body{
+	font-family: monospace;
+}
+
+h2{
+	text-align: center;
+	font-size: 30px;
+	padding: 20px;
+}
+
+.container{
+	padding: 0 10%;
+}
+
+.container-fluid{
+	padding: 0;
+}
+
+.container-fluid>.row{
+	padding: 0 10%;
+}
+
+.grid>*{
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.grid>*:nth-child(even){
+    /*Permettra de cibler les lignes paires d'un tableau*/
+    background: #5DBDB4;
+    border: 2px solid #46707D;
+}
+
+.grid>*:nth-child(odd){
+    /*Permettra de cibler les lignes impaires d'un tableau.*/
+    background: rgb(250, 246, 239);
+    border: 2px solid rgb(238, 208, 143);
+}
+
+.display-grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.display-flex{
+	display: flex;
+	flex-wrap: wrap;/* revenir à la ligne lorsqu'il ny a plus de place*/
+	justify-content: space-between;
+}
+
+.display-flex>*{
+	width: calc(100%/12);
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;/* revenir à la ligne lorsqu'il ny a plus de place*/
+}
+
+.row>*{
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.col-lg-1 {
+	flex-basis:calc(100%/12);
+}
+.col-lg-2{
+	flex-basis: calc(100%/12 * 2);
+}
+.col-lg-3{
+	flex-basis: calc(100%/12 * 3);
+}
+.col-lg-4{
+	flex-basis: calc(100%/12 * 4);
+}
+.col-lg-5{
+	flex-basis: calc(100%/12 * 5);
+}
+.col-lg-6{
+	flex-basis: calc(100%/12 * 6);
+}
+.col-lg-7{
+	flex-basis: calc(100%/12 * 7);
+}
+.col-lg-8{
+	flex-basis: calc(100%/12 * 8);
+}
+.col-lg-9{
+	flex-basis: calc(100%/12 * 9);
+}
+.col-lg-10{
+	flex-basis: calc(100%/12 * 10);
+}
+.col-lg-11{
+	flex-basis: calc(100%/12 * 11);
+}
+.col-lg-12{
+	flex-basis: calc(100%/12 * 12);
+}
+
+@media all and (max-width: 768px){
+	.row>*{
+		flex-basis: calc(100%/12 * 12);
+	}
+}
